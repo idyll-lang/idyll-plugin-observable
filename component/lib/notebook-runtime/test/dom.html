@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<body class="O--body">
+<div id="fooview"></div>
+<div id="foo"></div>
+<script src="/dist/notebook-runtime.js"></script>
+<script>
+
+var runtime = new Runtime(),
+    module = runtime.module();
+
+module.variable("#fooview").define("viewof foo", ["DOM"], DOM => DOM.range());
+module.variable("#foo").define("foo", ["Generators", "viewof foo"], (Generators, input) => Generators.input(input));
+
+</script>

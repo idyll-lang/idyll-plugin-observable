@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body class="O--body">
+<p>What is your name?
+<div id="name"></div>
+<div id="hello"></div>
+<script src="/dist/notebook-runtime.js"></script>
+<script>
+
+var runtime = new Runtime(),
+    module = runtime.module();
+
+module.variable("#name").define("viewof name", ["DOM"], DOM => DOM.input());
+module.variable().define("name", ["Generators", "viewof name"], (Generators, view) => Generators.input(view));
+module.variable("#hello").define(["name"], name => `Hello, ${name || "anonymous"}!`);
+
+</script>

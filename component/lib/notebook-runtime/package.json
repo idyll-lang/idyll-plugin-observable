@@ -1,0 +1,40 @@
+{
+  "name": "@observablehq/notebook-runtime",
+  "version": "1.1.1",
+  "license": "ISC",
+  "main": "src/",
+  "module": "src/",
+  "author": {
+    "name": "Observable, Inc.",
+    "url": "https://observablehq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/observablehq/notebook-runtime.git"
+  },
+  "scripts": {
+    "test": "tape -r esm 'test/**/*-test.js'",
+    "precommit": "eslint . && yarn test",
+    "prepare": "rollup -c"
+  },
+  "esm": {
+    "mode": "all",
+    "cjs": true
+  },
+  "dependencies": {
+    "@observablehq/notebook-inspector": "^1.1.0",
+    "@observablehq/notebook-stdlib": "^1.0.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "esm": "^3.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "husky": "^0.14.3",
+    "jsdom": "^11.5.1",
+    "rollup": "^0.52.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^3.0.0",
+    "tape": "^4.8.0",
+    "tape-await": "0.1.1"
+  }
+}

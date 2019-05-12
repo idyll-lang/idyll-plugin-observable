@@ -1,0 +1,19 @@
+{
+  "name": "idyll-plugin-observable",
+  "version": "1.0.1",
+  "description": "Idyll + Observable notebooks",
+  "main": "index.js",
+  "repository": "https://github.com/idyll-lang/idyll-plugin-observable",
+  "author": "Matthew Conlen",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "idyll-ast": "^2.0.6",
+    "idyll-observable-component": "^1.0.0",
+    "node-fetch": "^2.5.0"
+  }
+}
